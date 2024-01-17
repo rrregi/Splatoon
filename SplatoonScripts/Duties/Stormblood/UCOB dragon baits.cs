@@ -177,6 +177,7 @@ namespace SplatoonScriptsOfficial.Duties.Stormblood
                     ImGuiEx.Text($"{x.Name} ");
                     ImGuiEx.Text($"{x.NameId} ");
                     ImGuiEx.Text($"{x.Position} ");
+                    ImGuiEx.Text($"MathHelper.GetRelativeAngle(Vector3.Zero, x.Position) + 360) % 360");
                 }
             }
         }
