@@ -174,7 +174,6 @@ namespace SplatoonScriptsOfficial.Duties.Stormblood
                 ImGuiEx.Text($"Dragon Info: ");
                 foreach(var x in GetOrderedDragons())
                 {
-                    ImGuiEx.Text($"{GetOrderedDragons().indexOf(x)} ")
                     ImGuiEx.Text($"{x.Name} ");
                     ImGuiEx.Text($"{x.NameId} ");
                     ImGuiEx.Text($"{x.Position} ");
