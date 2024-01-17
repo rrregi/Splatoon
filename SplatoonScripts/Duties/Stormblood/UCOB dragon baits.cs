@@ -1,4 +1,4 @@
-﻿using Dalamud.Game.ClientState.Objects.SubKinds;
+using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Game.ClientState.Objects.Types;
 using ECommons;
 using ECommons.DalamudServices;
@@ -153,7 +153,7 @@ namespace SplatoonScriptsOfficial.Duties.Stormblood
 
         BattleChara[] GetOrderedDragons()
         {
-            return GetDragons().OrderBy(x => (MathHelper.GetRelativeAngle(Vector3.Zero, x.Position) + 360 - 3) % 360).ToArray();
+            return GetDragons().OrderBy(x => (MathHelper.GetRelativeAngle(Vector3.Zero, x.Position) + 360) % 360).ToArray();
         }
 
         IEnumerable<BattleChara> GetDragons()
@@ -174,7 +174,10 @@ namespace SplatoonScriptsOfficial.Duties.Stormblood
                 ImGuiEx.Text($"Dragons: ");
                 foreach(var x in GetOrderedDragons())
                 {
-                    ImGuiEx.Text($"{x.Name}");
+                    ImGuiEx.Text($"{GetOrderedDragons().indexOf(x)} ")
+                    ImGuiEx.Text($"{x.Name} ");
+                    ImGuiEx.Text($"{x.NameId} ");
+                    ImGuiEx.Text($"{x.Position} ");
                 }
             }
         }
